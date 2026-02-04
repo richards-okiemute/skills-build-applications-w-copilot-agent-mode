@@ -4,7 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'octofit_tracker.settings')
 django.setup()
 
-from octofit_tracker.models import User, Team, Activity, Leaderboard, Workout
+from fitness.models import User, Team, Activity, Leaderboard, Workout
 
 def populate():
     # Create Users

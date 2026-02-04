@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-c2&b=)hek-mu-10j!fl3*jz!g!v#3e80nvurq02)%-bfo3x$l#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'fitness',
+    'octofit_tracker',
 ]
 
 MIDDLEWARE = [

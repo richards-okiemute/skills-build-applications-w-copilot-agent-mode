@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'fitness',
     'octofit_tracker',
+    'djongo',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'octofit_db',
+        'CLIENT': {
+            'host': 'mongodb://localhost:27017'
+        }
     }
 }
 
@@ -125,6 +129,27 @@ STATIC_URL = 'static/'
 # CORS settings
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+# Allow common methods and headers explicitly
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
